@@ -63,9 +63,14 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, " 📅 %s ",    "date +'%a %b %d'"},
-	{ run_command, "⏰ %s",      "date +%T"},
+	{ keymap,      " ⌨ %s",      ""},
+	{ run_command, " 🗓 %s ",     "date +'%a %b %d'"},
+	{ run_command, "⌚ %s",      "date +%T"},
 	{ cpu_perc,    ";💻 %s%%",   "" },
 	{ temp,        " 🌡 %s",      "/sys/class/thermal/thermal_zone0/temp" },
-	{ temp,        "/%s C°",     "/sys/class/thermal/thermal_zone1/temp" },
+	{ temp,        "/%s",        "/sys/class/thermal/thermal_zone1/temp" },
+	{ temp,        "/%s",        "/sys/class/thermal/thermal_zone2/temp" },
+	{ temp,        "/%s C°",     "/sys/class/thermal/thermal_zone3/temp" },
+	{ disk_perc,   " 💾: %s%%",  "/"},
+	{ ram_perc,    " RAM: %s%%", ""},
 };
