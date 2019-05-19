@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 500;
+const unsigned int interval = 2000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -67,11 +67,11 @@ static const struct arg args[] = {
 { run_command, " %s |",      "~/.dwm/status_mail.sh" },	
 { run_command, " %s |",      "~/.dwm/status_bat.sh" },	
 { run_command, " %s |",      "~/.dwm/status_vol.sh" },	
-  { cpu_perc,    "cpu: %s%% |",   "" },
+/*  { cpu_perc,    "cpu: %s%% |",   "" },
 	{ temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },
 	{ temp,        " / %s |",        "/sys/class/thermal/thermal_zone1/temp" },
 	{ disk_perc,   " disc: %s%% |",  "/"},
-	{ ram_perc,    " ram: %s%% |", ""},
+	{ ram_perc,    " ram: %s%% |", ""},*/
 	{ run_command, " %s ",     "date +'%y.%m.%d'"},
 	{ run_command, " %s ",      "date +%H:%M"},
 };
