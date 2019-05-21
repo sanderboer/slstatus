@@ -65,7 +65,7 @@ static const struct arg args[] = {
 	/* function format          argument */
 { run_command, " %s |",      "~/.dwm/status_mpc.sh" },	
 { run_command, " %s |",      "~/.dwm/status_mail.sh" },	
-{ run_command, " %s |",      "~/.dwm/status_bat.sh" },	
+{ battery_perc, " %s |",      "BAT0" },	
 { run_command, " %s |",      "~/.dwm/status_vol.sh" },	
 /*  { cpu_perc,    "cpu: %s%% |",   "" },
 	{ temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },
