@@ -48,23 +48,10 @@
 	{
 		int perc;
 		char path[PATH_MAX];
-                static struct {
-                  char *symbol;
-                } map[] = {
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""},
-                           {""}
-                };
+                
+                char* map[]={"","","","","","","","","","",""};
 
-		if (esnprintf(path, sizeof(path),
+                if (esnprintf(path, sizeof(path),
 		              "/sys/class/power_supply/%s/capacity", bat) < 0) {
 			return NULL;
 		}
@@ -73,7 +60,8 @@
 		}
                 int x = round((float)perc/ 10.0);
            
-		return map[3].symbol;
+		/* return map[x].symbol; */
+                return bprintf("%s %i%%", map[x], perc);
 	}
 
 

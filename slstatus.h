@@ -46,7 +46,9 @@ const char *netspeed_rx(const char *interface);
 const char *netspeed_tx(const char *interface);
 
 /* num_files */
+int num_files_i(const char *path);
 const char *num_files(const char *path);
+const char * maildir_mail(const char *path);
 
 /* ram */
 const char *ram_free(void);
