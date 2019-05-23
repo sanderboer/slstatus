@@ -72,7 +72,7 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Unknown",    "?" },
+			{ "Unknown",    "" },
 			{ "Charging",    "" },
 			{ "Discharging", "" },
 		};
