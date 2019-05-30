@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 2000;
+const unsigned int interval = 500;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -69,7 +69,7 @@ static const struct arg args[] =
    { battery_state         , " %s"   , "BAT0" },	
    { battery_perc_nerdfont , " %s |" , "BAT0" },	
    { maildir_mail          , " %s |" , "/home/sander/Maildir"},
-   { datetime              , " %s "  , "%y.%m.%d %H:%M"},
+   { datetime              , " %s "  , "wk:%g %y.%m.%d %H:%M"},
    /* { run_command, " %s |",      "~/.dwm/status_mail.sh" },	 */
    /*  { cpu_perc,    "cpu: %s%% |",   "" },
        { temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },

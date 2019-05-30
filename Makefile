@@ -57,8 +57,8 @@ dist:
 install: all
 	# mkdir -p "$(DESTDIR)$(PREFIX)/bin"
 	# cp -f slstatus "$(DESTDIR)$(PREFIX)/bin"
-	cp -f slstatus "/home/sander/.sndr/bin"
-	chmod 755 "/home/sander/.sndr/bin/slstatus"
+	cp -f slstatus "/home/sander/.local/bin"
+	chmod 755 "/home/sander/.local/bin/slstatus"
 	# mkdir -p "$(DESTDIR)$(MANPREFIX)/man1"
 	# cp -f slstatus.1 "$(DESTDIR)$(MANPREFIX)/man1"
 	# chmod 644 "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"
