@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <stdio.h>
 #include <string.h>
-
+#include <math.h>
 #include "../util.h"
 
 #if defined(__linux__)
@@ -43,6 +43,28 @@
 		return bprintf("%d", perc);
 	}
 
+        const char*
+        battery_perc_nerdfont(const char *bat)
+	{
+		int perc;
+		char path[PATH_MAX];
+                
+                char* map[]={"","","","","","","","","","",""};
+
+                if (esnprintf(path, sizeof(path),
+		              "/sys/class/power_supply/%s/capacity", bat) < 0) {
+			return NULL;
+		}
+		if (pscanf(path, "%d", &perc) != 1) {
+			return NULL;
+		}
+                int x = round((float)perc/ 10.0);
+           
+		/* return map[x].symbol; */
+                return bprintf("%s %i%%", map[x], perc);
+	}
+
+
 	const char *
 	battery_state(const char *bat)
 	{
@@ -50,8 +72,9 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",    "+" },
-			{ "Discharging", "-" },
+			{ "Unknown",    "" },
+			{ "Charging",    "" },
+			{ "Discharging", "" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
