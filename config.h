@@ -62,17 +62,19 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-{ run_command, " %s |",      "~/.dwm/status_mpc.sh" },	
-{ run_command, " %s |",      "~/.dwm/status_mail.sh" },	
-/* { battery_perc, " %s |",      "BAT0" },*/	
-{ run_command, " %s |",      "~/.dwm/status_vol.sh" },	
-/*  { cpu_perc,    "cpu: %s%% |",   "" },
-	{ temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },
-	{ temp,        " / %s |",        "/sys/class/thermal/thermal_zone1/temp" },
-	{ disk_perc,   " disc: %s%% |",  "/"},
-	{ ram_perc,    " ram: %s%% |", ""},*/
-	{ run_command, " %s ",     "date +'%y.%m.%d'"},
-	{ run_command, " %s ",      "date +%H:%M"},
+  /* function format          argument */
+  { run_command, " %s |",      "~/.dwm/status_mpc.sh" },	
+  { run_command, " %s |",      "~/.dwm/status_mail.sh" },	
+  /*{ battery_perc, " %s |",      "BAT0" },*/
+
+  { run_command, " %s |",      "~/.dwm/status_vol.sh" },	
+  { run_command, " %s |",      "~/.dwm/status_bat.sh" },	
+  /*  { cpu_perc,    "cpu: %s%% |",   "" },
+      { temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },
+      { temp,        " / %s |",        "/sys/class/thermal/thermal_zone1/temp" },
+      { disk_perc,   " disc: %s%% |",  "/"},
+      { ram_perc,    " ram: %s%% |", ""},*/
+  { run_command, " %s ",     "date +'%y.%m.%d'"},
+  { run_command, " %s ",      "date +%H:%M"},
 };
 
