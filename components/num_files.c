@@ -4,7 +4,9 @@
 #include <string.h>
 
 #include "../util.h"
-
+#if defined(__FreeBSD__)
+#define PATH_MAX 256
+#endif
 int
 num_files_i(const char *path)
 {

@@ -11,10 +11,10 @@ X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
 
 # flags
-CPPFLAGS = -I$(X11INC) -D_DEFAULT_SOURCE
+CPPFLAGS = -I$(X11INC) -I/usr/local/include -D_DEFAULT_SOURCE
 CFLAGS   = -std=c99 -pedantic -Wall -Wextra -Os
-LDFLAGS  = -L$(X11LIB) -s
-LDLIBS   = -lX11 -lm
+LDFLAGS  = -L$(X11LIB) -L/usr/local/lib -s
+LDLIBS   = -lX11 -lm -lkvm
 
 # compiler and linker
 CC = cc
