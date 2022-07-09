@@ -4,7 +4,7 @@ VERSION = 0
 # customize below to fit your system
 
 # paths
-PREFIX = $(HOME)/.local
+PREFIX = $(HOME)/.local/slstatus
 MANPREFIX = $(PREFIX)/share/man
 
 X11INC = /usr/X11R6/include

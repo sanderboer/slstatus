@@ -76,12 +76,12 @@ static const char seperator[] = "%s │ ";
 
 static const struct arg args[] = {
   /* function format          argument */
-  { run_command, seperator,      "~/.dwm/status_mpc.sh" },
-  { run_command, seperator,      "~/.dwm/status_mail.sh" },
+  { run_command, seperator,      "~/.local/mybin/statusbar/status_mpc.sh" },
+  { run_command, seperator,      "~/.local/mybin/statusbar/status_mail.sh" },
   /*{ battery_perc, seperator,      "BAT0" },*/
 
-  { run_command, seperator,      "~/.dwm/status_vol.sh" },
-  { run_command, seperator,      "~/.dwm/status_bat.sh" },
+  { run_command, seperator,      "~/.local/mybin/statusbar/status_vol.sh" },
+  { run_command, seperator,      "~/.local/mybin/statusbar/status_bat.sh" },
   /*  { cpu_perc,    "cpu: %s%% │",   "" },
       { temp,        " t: %s",      "/sys/class/thermal/thermal_zone0/temp" },
       { temp,        " / %s │",        "/sys/class/thermal/thermal_zone1/temp" },
